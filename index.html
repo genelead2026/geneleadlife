@@ -1,0 +1,1964 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeneLead Life Sciences</title>
+
+    <!-- icon -->
+    <link rel="icon" type="image/jpeg" href="/image/logo.jpeg" />
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #2e7cf6;
+        --primary-dark: #1b5fd9;
+        --primary-light: #eff6ff;
+        --secondary: #10b981;
+        --secondary-light: #ecfdf5;
+        --accent: #f59e0b;
+        --accent-light: #fffbeb;
+        --bg: #f8fafc;
+        --white: #ffffff;
+        --text-dark: #1e293b;
+        --text-body: #475569;
+        --text-muted: #94a3b8;
+        --border: #e2e8f0;
+        --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+        --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+        --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.1);
+        --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.12);
+        --radius-sm: 8px;
+        --radius-md: 12px;
+        --radius-lg: 20px;
+        --radius-xl: 28px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: var(--text-body);
+        background-color: var(--bg);
+        overflow-x: hidden;
+        line-height: 1.7;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Inter", sans-serif;
+        color: var(--text-dark);
+        font-weight: 700;
+      }
+
+      /* ========== NAVBAR ========== */
+      .navbar-medical {
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--border);
+        padding: 14px 0;
+        transition: box-shadow 0.3s ease;
+      }
+      .navbar-medical.scrolled {
+        box-shadow: var(--shadow-md);
+      }
+      .navbar-brand-medical {
+        font-weight: 800;
+        font-size: 1.55rem;
+        color: var(--primary) !important;
+        letter-spacing: -0.5px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+      }
+      .navbar-brand-medical .brand-icon {
+        width: 38px;
+        height: 38px;
+        background: linear-gradient(135deg, var(--primary), #60a5fa);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.1rem;
+      }
+      .nav-link-medical {
+        color: var(--text-body) !important;
+        font-weight: 500;
+        font-size: 0.92rem;
+        padding: 8px 18px !important;
+        border-radius: var(--radius-sm);
+        transition: all 0.2s ease;
+      }
+      .nav-link-medical:hover,
+      .nav-link-medical.active {
+        color: var(--primary) !important;
+        background: var(--primary-light);
+      }
+      .btn-nav-cta {
+        background: var(--primary);
+        color: white !important;
+        font-weight: 600;
+        font-size: 0.9rem;
+        padding: 10px 24px !important;
+        border-radius: 50px;
+        border: none;
+        transition: all 0.25s ease;
+        box-shadow: 0 2px 8px rgba(46, 124, 246, 0.3);
+      }
+      .btn-nav-cta:hover {
+        background: var(--primary-dark);
+        color: white !important;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 16px rgba(46, 124, 246, 0.4);
+      }
+
+      /* ========== HERO ========== */
+      .hero-section {
+        padding: 120px 0 100px;
+        background: linear-gradient(
+          170deg,
+          #ffffff 0%,
+          var(--primary-light) 40%,
+          #f0f7ff 70%,
+          var(--bg) 100%
+        );
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-section::before {
+        content: "";
+        position: absolute;
+        top: -200px;
+        right: -200px;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle,
+          rgba(46, 124, 246, 0.08) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+      }
+      .hero-section::after {
+        content: "";
+        position: absolute;
+        bottom: -150px;
+        left: -150px;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(
+          circle,
+          rgba(16, 185, 129, 0.06) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+      }
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--white);
+        border: 1px solid var(--border);
+        padding: 6px 16px 6px 8px;
+        border-radius: 50px;
+        font-size: 0.82rem;
+        font-weight: 500;
+        color: var(--text-body);
+        margin-bottom: 24px;
+        box-shadow: var(--shadow-sm);
+      }
+      .hero-badge .badge-dot {
+        width: 8px;
+        height: 8px;
+        background: var(--secondary);
+        border-radius: 50%;
+        animation: pulse-dot 2s ease-in-out infinite;
+      }
+      @keyframes pulse-dot {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.5;
+          transform: scale(0.8);
+        }
+      }
+      .hero-title {
+        font-size: 3.8rem;
+        font-weight: 800;
+        line-height: 1.08;
+        letter-spacing: -1.5px;
+        margin-bottom: 24px;
+        color: var(--text-dark);
+      }
+      .hero-title .text-gradient {
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          #60a5fa,
+          var(--secondary)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .hero-subtitle {
+        font-size: 1.15rem;
+        font-weight: 400;
+        color: var(--text-body);
+        line-height: 1.75;
+        margin-bottom: 36px;
+        max-width: 500px;
+      }
+      .hero-buttons {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-bottom: 48px;
+      }
+      .btn-primary-medical {
+        background: var(--primary);
+        color: white;
+        font-weight: 600;
+        font-size: 0.95rem;
+        padding: 14px 32px;
+        border-radius: 50px;
+        border: none;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.25s ease;
+        box-shadow: 0 4px 16px rgba(46, 124, 246, 0.35);
+      }
+      .btn-primary-medical:hover {
+        background: var(--primary-dark);
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(46, 124, 246, 0.4);
+      }
+      .btn-outline-medical {
+        background: var(--white);
+        color: var(--text-dark);
+        font-weight: 600;
+        font-size: 0.95rem;
+        padding: 14px 32px;
+        border-radius: 50px;
+        border: 2px solid var(--border);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.25s ease;
+      }
+      .btn-outline-medical:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+        background: var(--primary-light);
+      }
+      .hero-stats {
+        display: flex;
+        gap: 40px;
+        padding-top: 32px;
+        border-top: 1px solid var(--border);
+      }
+      .hero-stat-number {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: var(--text-dark);
+        line-height: 1.2;
+      }
+      .hero-stat-label {
+        font-size: 0.82rem;
+        color: var(--text-muted);
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .hero-image-wrapper {
+        position: relative;
+      }
+      .hero-image-main {
+        width: 100%;
+        border-radius: var(--radius-xl);
+        box-shadow: var(--shadow-xl);
+        object-fit: cover;
+        aspect-ratio: 4/5;
+      }
+      .hero-floating-card {
+        position: absolute;
+        background: var(--white);
+        border-radius: var(--radius-md);
+        padding: 14px 18px;
+        box-shadow: var(--shadow-lg);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+      }
+      .hero-floating-card.card-top {
+        top: 30px;
+        right: -20px;
+      }
+      .hero-floating-card.card-bottom {
+        bottom: 40px;
+        left: -20px;
+      }
+      .floating-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        flex-shrink: 0;
+      }
+      .floating-icon.blue {
+        background: var(--primary-light);
+        color: var(--primary);
+      }
+      .floating-icon.green {
+        background: var(--secondary-light);
+        color: var(--secondary);
+      }
+      .floating-card-text {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--text-dark);
+        line-height: 1.3;
+      }
+      .floating-card-sub {
+        font-size: 0.72rem;
+        color: var(--text-muted);
+        font-weight: 400;
+      }
+
+      /* ========== TRUST BAR ========== */
+      .trust-bar {
+        padding: 50px 0;
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+      }
+      .trust-label {
+        font-size: 0.78rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--text-muted);
+        text-align: center;
+        margin-bottom: 28px;
+      }
+      .trust-logos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 48px;
+        flex-wrap: wrap;
+        opacity: 0.4;
+      }
+      .trust-logo {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--text-dark);
+        letter-spacing: -0.5px;
+      }
+
+      /* ========== SECTION COMMON ========== */
+      .section-padding {
+        padding: 100px 0;
+      }
+      .section-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: var(--primary-light);
+        color: var(--primary);
+        font-size: 0.78rem;
+        font-weight: 600;
+        padding: 6px 14px;
+        border-radius: 50px;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .section-title {
+        font-size: 2.6rem;
+        font-weight: 800;
+        letter-spacing: -1px;
+        line-height: 1.15;
+        margin-bottom: 16px;
+      }
+      .section-subtitle {
+        font-size: 1.05rem;
+        color: var(--text-body);
+        max-width: 550px;
+        line-height: 1.7;
+      }
+
+      /* ========== CATEGORIES ========== */
+      .categories-section {
+        background: var(--white);
+      }
+      .category-card {
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: 36px 28px;
+        text-align: center;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: block;
+        height: 100%;
+      }
+      .category-card:hover {
+        border-color: var(--primary);
+        box-shadow: var(--shadow-md);
+        transform: translateY(-4px);
+        background: var(--white);
+      }
+      .category-icon {
+        width: 68px;
+        height: 68px;
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+        margin: 0 auto 20px;
+        transition: transform 0.3s ease;
+      }
+      .category-card:hover .category-icon {
+        transform: scale(1.1);
+      }
+      .category-icon.blue {
+        background: var(--primary-light);
+        color: var(--primary);
+      }
+      .category-icon.green {
+        background: var(--secondary-light);
+        color: var(--secondary);
+      }
+      .category-icon.amber {
+        background: var(--accent-light);
+        color: var(--accent);
+      }
+      .category-icon.rose {
+        background: #fff1f2;
+        color: #f43f5e;
+      }
+      .category-icon.violet {
+        background: #f5f3ff;
+        color: #8b5cf6;
+      }
+      .category-icon.cyan {
+        background: #ecfeff;
+        color: #06b6d4;
+      }
+      .category-name {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--text-dark);
+        margin-bottom: 6px;
+      }
+      .category-count {
+        font-size: 0.82rem;
+        color: var(--text-muted);
+      }
+
+      /* ========== PRODUCTS ========== */
+      .products-section {
+        background: var(--bg);
+      }
+      .product-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        transition: all 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .product-card:hover {
+        box-shadow: var(--shadow-lg);
+        transform: translateY(-4px);
+        border-color: transparent;
+      }
+      .product-image-wrap {
+        position: relative;
+        background: var(--bg);
+        padding: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 4/3;
+        overflow: hidden;
+      }
+      .product-image-wrap img {
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+        transition: transform 0.4s ease;
+      }
+      .product-card:hover .product-image-wrap img {
+        transform: scale(1.05);
+      }
+      .product-badge-tag {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        padding: 4px 10px;
+        border-radius: 50px;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+      }
+      .product-badge-tag.new {
+        background: var(--primary);
+        color: white;
+      }
+      .product-badge-tag.sale {
+        background: #f43f5e;
+        color: white;
+      }
+      .product-badge-tag.best {
+        background: var(--secondary);
+        color: white;
+      }
+      .product-wishlist {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        width: 36px;
+        height: 36px;
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+      .product-wishlist:hover {
+        color: #f43f5e;
+        border-color: #f43f5e;
+      }
+      .product-info {
+        padding: 20px 24px 24px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+      .product-category-label {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--primary);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 6px;
+      }
+      .product-name {
+        font-size: 1.02rem;
+        font-weight: 700;
+        color: var(--text-dark);
+        margin-bottom: 8px;
+        line-height: 1.4;
+      }
+      .product-rating {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 14px;
+      }
+      .product-stars {
+        color: var(--accent);
+        font-size: 0.82rem;
+      }
+      .product-rating-count {
+        font-size: 0.78rem;
+        color: var(--text-muted);
+      }
+      .product-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: auto;
+        padding-top: 14px;
+        border-top: 1px solid var(--border);
+      }
+      .product-price {
+        font-size: 1.3rem;
+        font-weight: 800;
+        color: var(--text-dark);
+      }
+      .product-price .old-price {
+        font-size: 0.85rem;
+        font-weight: 400;
+        color: var(--text-muted);
+        text-decoration: line-through;
+        margin-left: 6px;
+      }
+      .btn-add-cart {
+        width: 42px;
+        height: 42px;
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.05rem;
+        transition: all 0.2s ease;
+        text-decoration: none;
+      }
+      .btn-add-cart:hover {
+        background: var(--primary-dark);
+        color: white;
+        transform: scale(1.08);
+      }
+
+      /* ========== FEATURES ========== */
+      .features-section {
+        background: var(--white);
+      }
+      .feature-card {
+        padding: 36px 28px;
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--border);
+        transition: all 0.3s ease;
+        height: 100%;
+      }
+      .feature-card:hover {
+        border-color: var(--primary);
+        box-shadow: var(--shadow-md);
+      }
+      .feature-icon-wrap {
+        width: 56px;
+        height: 56px;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+      }
+      .feature-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .feature-text {
+        font-size: 0.9rem;
+        color: var(--text-body);
+        line-height: 1.7;
+        margin-bottom: 0;
+      }
+
+      /* ========== ABOUT / WHY US ========== */
+      .about-section {
+        background: linear-gradient(
+          170deg,
+          var(--primary-light) 0%,
+          var(--bg) 100%
+        );
+      }
+      .about-image-wrapper {
+        position: relative;
+      }
+      .about-image {
+        width: 100%;
+        border-radius: var(--radius-xl);
+        box-shadow: var(--shadow-lg);
+        object-fit: cover;
+        aspect-ratio: 5/6;
+      }
+      .about-experience-badge {
+        position: absolute;
+        bottom: -20px;
+        right: -10px;
+        background: var(--primary);
+        color: white;
+        padding: 20px 28px;
+        border-radius: var(--radius-md);
+        text-align: center;
+        box-shadow: 0 8px 24px rgba(46, 124, 246, 0.35);
+      }
+      .about-experience-badge .exp-number {
+        font-size: 2.2rem;
+        font-weight: 800;
+        line-height: 1;
+      }
+      .about-experience-badge .exp-text {
+        font-size: 0.78rem;
+        font-weight: 500;
+        opacity: 0.9;
+      }
+      .about-checklist {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .about-checklist li {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 10px 0;
+        font-size: 0.95rem;
+        color: var(--text-body);
+      }
+      .about-checklist li .check-icon {
+        width: 26px;
+        height: 26px;
+        background: var(--secondary-light);
+        color: var(--secondary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      /* ========== TESTIMONIALS ========== */
+      .testimonials-section {
+        background: var(--white);
+      }
+      .testimonial-card {
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: 32px;
+        height: 100%;
+        transition: all 0.3s ease;
+      }
+      .testimonial-card:hover {
+        box-shadow: var(--shadow-md);
+        border-color: var(--primary);
+      }
+      .testimonial-stars {
+        color: var(--accent);
+        font-size: 0.9rem;
+        margin-bottom: 16px;
+      }
+      .testimonial-text {
+        font-size: 0.95rem;
+        color: var(--text-body);
+        line-height: 1.75;
+        margin-bottom: 24px;
+        font-style: italic;
+      }
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .testimonial-avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--white);
+        box-shadow: var(--shadow-sm);
+      }
+      .testimonial-name {
+        font-size: 0.92rem;
+        font-weight: 700;
+        color: var(--text-dark);
+      }
+      .testimonial-role {
+        font-size: 0.78rem;
+        color: var(--text-muted);
+      }
+
+
+      /* ========== FOOTER ========== */
+      .footer-section {
+        background: var(--text-dark);
+        color: rgba(255, 255, 255, 0.7);
+        padding: 80px 0 0;
+      }
+      .footer-brand {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: white;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 16px;
+      }
+      .footer-brand .brand-icon {
+        width: 36px;
+        height: 36px;
+        background: linear-gradient(135deg, var(--primary), #60a5fa);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1rem;
+      }
+      .footer-desc {
+        font-size: 0.9rem;
+        line-height: 1.7;
+        margin-bottom: 24px;
+        max-width: 320px;
+      }
+      .footer-social {
+        display: flex;
+        gap: 10px;
+      }
+      .footer-social a {
+        width: 38px;
+        height: 38px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+        transition: all 0.2s ease;
+        font-size: 1rem;
+      }
+      .footer-social a:hover {
+        background: var(--primary);
+        color: white;
+      }
+      .footer-heading {
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+      }
+      .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .footer-links li {
+        margin-bottom: 10px;
+      }
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: all 0.2s ease;
+      }
+      .footer-links a:hover {
+        color: white;
+        padding-left: 4px;
+      }
+      .footer-newsletter-input {
+        display: flex;
+        gap: 8px;
+      }
+      .footer-newsletter-input input {
+        flex: 1;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 12px 16px;
+        color: white;
+        font-size: 0.9rem;
+        outline: none;
+        transition: border-color 0.2s ease;
+      }
+      .footer-newsletter-input input::placeholder {
+        color: rgba(255, 255, 255, 0.35);
+      }
+      .footer-newsletter-input input:focus {
+        border-color: var(--primary);
+      }
+      .footer-newsletter-input button {
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 12px 20px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: background 0.2s ease;
+      }
+      .footer-newsletter-input button:hover {
+        background: var(--primary-dark);
+      }
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 24px 0;
+        margin-top: 60px;
+      }
+      .footer-bottom p {
+        font-size: 0.82rem;
+        color: rgba(255, 255, 255, 0.4);
+        margin: 0;
+      }
+      .footer-bottom-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 24px;
+      }
+      .footer-bottom-links a {
+        font-size: 0.82rem;
+        color: rgba(255, 255, 255, 0.4);
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+      .footer-bottom-links a:hover {
+        color: white;
+      }
+
+
+      /* contact us styling */
+      #contactus {
+        background: rgb(46, 124, 246);
+      }
+      #contactus .container {
+        background: rgba(255, 255, 255, 0.12); /* Semi-transparent */
+        backdrop-filter: blur(12px);
+        /* -webkit-backdrop-filter: blur(12px); */
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 15px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      }
+
+      #contactus .container h2,
+      #contactus .container label,
+      #contactus .container p {
+        color: white;
+      }
+      #contactus p {
+        font-family: "Inter", sans-serif;
+      }
+      #myform label {
+        font-weight: bold;
+      }
+      #myform input {
+        width: 80%;
+        /* background-color: transparent; */
+        /* color: white; */
+      }
+      #myform input:focus {
+        outline: none;
+        box-shadow: 0 5px 10px white;
+      }
+      /*  end contact us styling */
+      @media screen and (max-width: 600px) {
+        #myform input {
+          width: 100%;
+        }
+      }
+      /* ========== RESPONSIVE ========== */
+      @media (max-width: 991px) {
+        .hero-title {
+          font-size: 2.8rem;
+        }
+        .hero-section {
+          padding: 100px 0 80px;
+          text-align: center;
+        }
+        .hero-subtitle {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .hero-buttons {
+          justify-content: center;
+        }
+        .hero-stats {
+          justify-content: center;
+        }
+        .hero-image-wrapper {
+          margin-top: 50px;
+        }
+        .hero-floating-card.card-top {
+          right: 10px;
+          top: 20px;
+        }
+        .hero-floating-card.card-bottom {
+          left: 10px;
+          bottom: 20px;
+        }
+        .section-title {
+          font-size: 2.2rem;
+        }
+      
+      }
+
+      @media (max-width: 767px) {
+        .hero-title {
+          font-size: 2.2rem;
+        }
+        .hero-stats {
+          gap: 24px;
+        }
+        .hero-stat-number {
+          font-size: 1.4rem;
+        }
+        .section-title {
+          font-size: 1.9rem;
+        }
+        .section-padding {
+          padding: 70px 0;
+        }
+        .cta-title {
+          font-size: 1.8rem;
+        }
+        .cta-subtitle {
+          font-size: 0.95rem;
+        }
+        .trust-logos {
+          gap: 28px;
+        }
+        .trust-logo {
+          font-size: 1rem;
+        }
+        .footer-bottom {
+          text-align: center;
+        }
+        .footer-bottom-links {
+          justify-content: center;
+          margin-top: 12px;
+          flex-wrap: wrap;
+          gap: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar navbar-expand-lg navbar-medical fixed-top">
+      <div class="container">
+        <a class="navbar-brand-medical" href="#">
+          <!-- <span class="brand-icon"><i class="bi bi-heart-pulse-fill"></i></span> -->
+          <img src="image/mylogo.png" alt="" width="80  px" height="80px" />
+          GeneLead Life
+        </a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMain"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMain">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link nav-link-medical active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-medical" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-medical" href="#products">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-medical" href="#contactus">Contact</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link nav-link-medical" href="#testimonials"
+                >Reviews</a
+              >
+            </li> -->
+          </ul>
+          <div class="d-flex align-items-center gap-3">
+            <a href="#" class="nav-link-medical"
+              ><i class="bi bi-search"></i
+            ></a>
+            <a href="#" class="nav-link-medical position-relative">
+              <i class="bi bi-cart3"></i>
+              <span
+                style="
+                  position: absolute;
+                  top: 2px;
+                  right: 2px;
+                  width: 8px;
+                  height: 8px;
+                  background: #f43f5e;
+                  border-radius: 50;
+                  border: 2px solid white;
+                  border-radius: 50%;
+                "
+              ></span>
+            </a>
+            <a href="#" class="btn btn-nav-cta">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col p-5 mt-3">
+            <h1 class="hero-title text-center">
+              Premium<br />
+              <span class="text-gradient">GeneLead Life Science</span><br />
+              You Can Trust
+            </h1>
+            <p class="hero-subtitle mx-auto" style="text-align: center">
+              Discover our curated collection of high-quality medical supplies,
+              equipment, and healthcare essentials — delivered with care to your
+              doorstep.
+            </p>
+            <div class="hero-buttons d-flex justify-content-center">
+              <a href="#products" class="btn-primary-medical">
+                Shop Now <i class="bi bi-arrow-right"></i>
+              </a>
+              <a href="#about" class="btn-outline-medical">
+                <i class="bi bi-play-circle"></i> Learn More
+              </a>
+            </div>
+            <div class="hero-stats d-flex justify-content-center">
+              <div>
+                <div class="hero-stat-number">5,000+</div>
+                <div class="hero-stat-label">Products</div>
+              </div>
+              <div>
+                <div class="hero-stat-number">10K+</div>
+                <div class="hero-stat-label">Customers</div>
+              </div>
+              <div>
+                <div class="hero-stat-number">99.8%</div>
+                <div class="hero-stat-label">Satisfaction</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- our vison code -->
+    <div class="container-fluid px-5 bg-white pt-5">
+      <!-- <h1 class="text-center">Our Vision</h1> -->
+      <h2 class="section-title d-lg-none d-block text-center">Our Vision</h2>
+      <div class="row">
+        <div class="col-lg">
+          <img src="image/reception.jpg" alt="" class="img-fluid mx-auto d-block" />
+        </div>
+        <div
+          class="col-lg d-flex justify-content-center flex-column align-items-center"
+        >
+          <h2 class="section-title d-lg-block d-none">Our Vision</h2>
+          <p style="text-align: justify" class="section-subtitle">
+            To be a premier, highly trusted global pillar in the life sciences
+            sector—stabilizing immediate medical supply chains through elite
+            consumables trading, while driving translationally relevant
+            innovations in diagnostic product R&D to forge a healthier, more
+            secure world.
+          </p>
+          <div class="col">
+            <button class="btn-primary-medical">Get Connected</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- our vison code -->
+
+    <!-- ========== content ========== -->
+    <section class="categories-section section-padding" id="categories">
+      <div class="container">
+        <div class="text-center mb-5">
+          <!-- <span class="section-badge"
+            ><i class="bi bi-grid-3x3-gap"></i> Content</span
+          > -->
+          <h2 class="section-title">Browse by Content</h2>
+          <p class="section-subtitle mx-auto">
+            Find exactly what you need from our comprehensive range of medical
+            product categories.
+          </p>
+        </div>
+        <div class="row g-4">
+          <div class="col-6 col-md-4 col-lg-2">
+            <a href="#" class="category-card">
+              <div class="category-icon blue">
+                <i class="bi bi-capsule"></i>
+              </div>
+              <div class="category-name">Medicines</div>
+              <div class="category-count">1,200+ Items</div>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a href="#" class="category-card">
+              <div class="category-icon green">
+                <i class="bi bi-heart-pulse"></i>
+              </div>
+              <div class="category-name">Diagnostics</div>
+              <div class="category-count">850+ Items</div>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a href="#" class="category-card">
+              <div class="category-icon amber">
+                <i class="bi bi-bandaid"></i>
+              </div>
+              <div class="category-name">First Aid</div>
+              <div class="category-count">430+ Items</div>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a href="#" class="category-card">
+              <div class="category-icon rose">
+                <i class="bi bi-clipboard2-pulse"></i>
+              </div>
+              <div class="category-name">Surgical</div>
+              <div class="category-count">670+ Items</div>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a href="#" class="category-card">
+              <div class="category-icon violet">
+                <i class="bi bi-lungs"></i>
+              </div>
+              <div class="category-name">Respiratory</div>
+              <div class="category-count">320+ Items</div>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a href="#" class="category-card">
+              <div class="category-icon cyan">
+                <i class="bi bi-thermometer-half"></i>
+              </div>
+              <div class="category-name">Monitoring</div>
+              <div class="category-count">540+ Items</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PRODUCTS ========== -->
+    <section class="products-section section-padding" id="products">
+      <div class="container">
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5"
+        >
+          <div>
+            <span class="section-badge"
+              ><i class="bi bi-bag-heart"></i> Featured</span
+            >
+            <h2 class="section-title">Top Selling Products</h2>
+            <p class="section-subtitle">
+              Hand-picked medical essentials trusted by professionals worldwide.
+            </p>
+          </div>
+          <a
+            href="#"
+            class="btn-outline-medical mt-3 mt-md-0"
+            style="white-space: nowrap"
+          >
+            View All Products <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+        <div class="row g-4">
+          <!-- Product 1 -->
+          <div class="col-sm-6 col-lg-3">
+            <div class="product-card">
+              <div class="product-image-wrap">
+                <span class="product-badge-tag new">New</span>
+                <a href="#" class="product-wishlist"
+                  ><i class="bi bi-heart"></i
+                ></a>
+                <img src="image/BloodGlucoseTestStrips.jpg" alt="Digital Thermometer" />
+              </div>
+              <div class="product-info">
+                <div class="product-category-label">IVD</div>
+                <div class="product-name">Blood Glucose Test Strips</div>
+                <div class="product-rating">
+                  <span class="product-stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-half"></i>
+                  </span>
+                  <span class="product-rating-count">(234)</span>
+                </div>
+                <div class="product-bottom">
+                  <div class="product-price">$29.99</div>
+                  <a href="#" class="btn-add-cart"
+                    ><i class="bi bi-plus"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product 2 -->
+          <div class="col-sm-6 col-lg-3">
+            <div class="product-card">
+              <div class="product-image-wrap">
+                <span class="product-badge-tag sale">Sale</span>
+                <a href="#" class="product-wishlist"
+                  ><i class="bi bi-heart"></i
+                ></a>
+                <img src="image/AutomaticBloodPressureMonitor.jpg" alt="Blood Pressure Monitor" />
+              </div>
+              <div class="product-info">
+                <div class="product-category-label">Diagnostics</div>
+                <div class="product-name">Automatic Blood Pressure Monitor</div>
+                <div class="product-rating">
+                  <span class="product-stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </span>
+                  <span class="product-rating-count">(512)</span>
+                </div>
+                <div class="product-bottom">
+                  <div class="product-price">
+                    $49.99 <span class="old-price">$69.99</span>
+                  </div>
+                  <a href="#" class="btn-add-cart"
+                    ><i class="bi bi-plus"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product 3 -->
+          <div class="col-sm-6 col-lg-3">
+            <div class="product-card">
+              <div class="product-image-wrap">
+                <span class="product-badge-tag best">Best</span>
+                <a href="#" class="product-wishlist"
+                  ><i class="bi bi-heart"></i
+                ></a>
+                <img src="image/PregnancyTestKit.jpg" alt="First Aid Kit" />
+              </div>
+              <div class="product-info">
+                <div class="product-category-label">IVD</div>
+                <div class="product-name">Pregnancy Test Kit</div>
+                <div class="product-rating">
+                  <span class="product-stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </span>
+                  <span class="product-rating-count">(1,024)</span>
+                </div>
+                <div class="product-bottom">
+                  <div class="product-price">$39.99</div>
+                  <a href="#" class="btn-add-cart"
+                    ><i class="bi bi-plus"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product 4 -->
+          <div class="col-sm-6 col-lg-3">
+            <div class="product-card">
+              <div class="product-image-wrap">
+                <span class="product-badge-tag new">New</span>
+                <a href="#" class="product-wishlist"
+                  ><i class="bi bi-heart"></i
+                ></a>
+                <img src="image/HIVTest.jpg" alt="Pulse Oximeter" />
+              </div>
+              <div class="product-info">
+                <div class="product-category-label">IVD</div>
+                <div class="product-name">HIV Test</div>
+                <div class="product-rating">
+                  <span class="product-stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                  </span>
+                  <span class="product-rating-count">(387)</span>
+                </div>
+                <div class="product-bottom">
+                  <div class="product-price">$24.99</div>
+                  <a href="#" class="btn-add-cart"
+                    ><i class="bi bi-plus"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product 5 -->
+          <div class="col-sm-6 col-lg-3">
+            <div class="product-card">
+              <div class="product-image-wrap">
+                <a href="#" class="product-wishlist"
+                  ><i class="bi bi-heart"></i
+                ></a>
+                <img src="image/ProfessionalDual-HeadStethoscope.jpg" alt="Stethoscope" />
+              </div>
+              <div class="product-info">
+                <div class="product-category-label">Diagnostics</div>
+                <div class="product-name">
+                  Professional Dual-Head Stethoscope
+                </div>
+                <div class="product-rating">
+                  <span class="product-stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-half"></i>
+                  </span>
+                  <span class="product-rating-count">(198)</span>
+                </div>
+                <div class="product-bottom">
+                  <div class="product-price">$89.99</div>
+                  <a href="#" class="btn-add-cart"
+                    ><i class="bi bi-plus"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product 6 -->
+          <div class="col-sm-6 col-lg-3">
+            <div class="product-card">
+              <div class="product-image-wrap">
+                <span class="product-badge-tag sale">Sale</span>
+                <a href="#" class="product-wishlist"
+                  ><i class="bi bi-heart"></i
+                ></a>
+                <img src="image/Influenza(flu)Testing.jpg" alt="Glucometer" />
+              </div>
+              <div class="product-info">
+                <div class="product-category-label">RT-PCR</div>
+                <div class="product-name">Influenza(flu)Testing</div>
+                <div class="product-rating">
+                  <span class="product-stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </span>
+                  <span class="product-rating-count">(756)</span>
+                </div>
+                <div class="product-bottom">
+                  <div class="product-price">
+                    $19.99 <span class="old-price">$34.99</span>
+                  </div>
+                  <a href="#" class="btn-add-cart"
+                    ><i class="bi bi-plus"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product 7 -->
+          <div class="col-sm-6 col-lg-3">
+            <div class="product-card">
+              <div class="product-image-wrap">
+                <span class="product-badge-tag best">Best</span>
+                <a href="#" class="product-wishlist"
+                  ><i class="bi bi-heart"></i
+                ></a>
+                <img src="image/HepatitisVirusTesting.jpg" alt="Nebulizer" />
+              </div>
+              <div class="product-info">
+                <div class="product-category-label">RT-PCR</div>
+                <div class="product-name">Hepatitis Virus Testing</div>
+                <div class="product-rating">
+                  <span class="product-stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-half"></i>
+                  </span>
+                  <span class="product-rating-count">(421)</span>
+                </div>
+                <div class="product-bottom">
+                  <div class="product-price">$54.99</div>
+                  <a href="#" class="btn-add-cart"
+                    ><i class="bi bi-plus"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product 8 -->
+          <div class="col-sm-6 col-lg-3">
+            <div class="product-card">
+              <div class="product-image-wrap">
+                <a href="#" class="product-wishlist"
+                  ><i class="bi bi-heart"></i
+                ></a>
+                <img src="image/COVID-19Testing.jpg" alt="Surgical Mask" />
+              </div>
+              <div class="product-info">
+                <div class="product-category-label">RT-PCR</div>
+                <div class="product-name">COVID-19 Testing</div>
+                <div class="product-rating">
+                  <span class="product-stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </span>
+                  <span class="product-rating-count">(2,130)</span>
+                </div>
+                <div class="product-bottom">
+                  <div class="product-price">$34.99</div>
+                  <a href="#" class="btn-add-cart"
+                    ><i class="bi bi-plus"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FEATURES ========== -->
+    <section class="features-section section-padding">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-badge"
+            ><i class="bi bi-gem"></i> Why Choose Us</span
+          >
+          <h2 class="section-title">Built for Healthcare Excellence</h2>
+          <p class="section-subtitle mx-auto">
+            Every detail of our service is designed to meet the highest
+            standards of medical supply delivery.
+          </p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-card">
+              <div
+                class="feature-icon-wrap"
+                style="background: var(--primary-light); color: var(--primary)"
+              >
+                <i class="bi bi-patch-check-fill"></i>
+              </div>
+              <h5 class="feature-title">FDA Certified</h5>
+              <p class="feature-text">
+                All products meet rigorous FDA standards for safety and efficacy
+                in medical environments.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-card">
+              <div
+                class="feature-icon-wrap"
+                style="
+                  background: var(--secondary-light);
+                  color: var(--secondary);
+                "
+              >
+                <i class="bi bi-lightning-charge-fill"></i>
+              </div>
+              <h5 class="feature-title">Fast Delivery</h5>
+              <p class="feature-text">
+                Same-day dispatch with express shipping options to get supplies
+                where they're needed most.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-card">
+              <div
+                class="feature-icon-wrap"
+                style="background: var(--accent-light); color: var(--accent)"
+              >
+                <i class="bi bi-headset"></i>
+              </div>
+              <h5 class="feature-title">24/7 Support</h5>
+              <p class="feature-text">
+                Round-the-clock expert support from trained medical supply
+                specialists for all your needs.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-card">
+              <div
+                class="feature-icon-wrap"
+                style="background: #fff1f2; color: #f43f5e"
+              >
+                <i class="bi bi-arrow-repeat"></i>
+              </div>
+              <h5 class="feature-title">Easy Returns</h5>
+              <p class="feature-text">
+                Hassle-free 30-day return policy with full refund guarantee on
+                all unopened products.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="about-section section-padding" id="about">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <div class="about-image-wrapper">
+              <img
+                src="image/abotus.png"
+                alt="About MediCare"
+                class="about-image"
+              />
+              <div class="about-experience-badge">
+                <div class="exp-number">15+</div>
+                <div class="exp-text">Years of<br />Excellence</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 p-5">
+            <!-- <span class="section-badge"
+              ><i class="bi bi-info-circle"></i> About Us</span
+            > -->
+            <h2 class="section-title">About Us</h2>
+            <p class="section-subtitle mb-4" style="text-align: justify">
+              At GeneLead Life Sciences Ltd, our growth roadmap is built on
+              commercial stability and technical excellence. We operate a highly
+              successful dual-phase business model: supplying the immediate
+              needs of global ldiagnostic products while simultaneously
+              channeling commercial momentum into the Research & Development
+              (R&D) of advanced Diagnostic Assets and Products. Backed by deep
+              expertise in molecular biology, protein engineering, and
+              nanotechnology, our R&D roadmap is actively scaling in-house
+              medical innovations. From multiplex assay optimization to
+              automated extraction prototypes, we engineer diagnostic assets
+              designed for seamless technology transfer and absolute compliance
+              across cGMP, ISO 13485, and CE-IVD frameworks.
+            </p>
+            </ul> 
+            <div class="mt-4">
+              <a href="#" class="btn-primary-medical">
+                Discover Our Story <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="testimonials-section section-padding" id="testimonials">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-badge"
+            ><i class="bi bi-chat-quote"></i> Testimonials</span
+          >
+          <h2 class="section-title">Scientific Advisory Committee Say</h2>
+          <p class="section-subtitle mx-auto">
+            Many of Doctors Describe the Quality of our work
+          </p>
+        </div>
+        <!-- <div class="row g-4"> -->
+        <div class="col">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+              ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+              ><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="testimonial-text">
+              <q
+                >Distinguished biotechnologist and industrial biomanufacturing
+                leader with over 12+ years of international track record
+                spanning discovery life sciences, clinical asset translation,
+                and global regulatory execution. Internationally recognized
+                expert in the end-to-end engineering of advanced diagnostics,
+                Real-Time PCR (qPCR/RT-PCR), isothermal molecular assays, and
+                lateral flow platforms. Dr. Singh brings extensive experience in
+                architecting cGMP/GDP contamination controls, facility plant
+                design, and technology transfers satisfying UK MHRA, ISO 13485,
+                and CE-IVD frameworks.</q
+              >
+            </p>
+            <div class="testimonial-author">
+              <!-- <img
+                  src="https://picsum.photos/seed/doc1/96/96.jpg"
+                  alt="Dr. Sarah Mitchell"
+                  class="testimonial-avatar"
+                /> -->
+              <div>
+                <div class="testimonial-name">Dr. Gurdyal Singh, PhD, MBA</div>
+                <div class="testimonial-role">
+                  Biotechnology Consultant & Technical Advisor
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col mt-5">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+              ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+              ><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="testimonial-text">
+              "Elite academician and widely cited global expert in Protein
+              Biochemistry and Microbial Biotechnology, boasting over 270+
+              peer-reviewed scientific publications and nearly 6,000
+              international research citations. A premier national fellowship
+              researcher, Prof. Kaur has spent over two decades leading
+              pioneering research into molecular mechanisms, lipid metabolism,
+              structural enzyme kinetics, and protein expression systems. Her
+              extensive peer-validated portfolio includes co-developing critical
+              diagnostic and therapeutic candidate research sanctioned by
+              premium government funding bodies, including the Council of
+              Scientific and Industrial Research (CSIR) and the Indian Council
+              of Medical Research (ICMR).
+            </p>
+            <div class="testimonial-author">
+              <!-- <img
+                  src="https://picsum.photos/seed/doc2/96/96.jpg"
+                  alt="James Rodriguez"
+                  class="testimonial-avatar"
+                /> -->
+              <div>
+                <div class="testimonial-name">Prof. (Dr.) Jagdeep Kaur</div>
+                <div class="testimonial-role">
+                  Senior Academic Member & Scientific Advisor
+                </div>
+              </div>
+            </div>
+            <!-- </div> -->
+          </div>
+        
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- medical practice part -->
+    <div class="container-fluid p-5" id="medical_practice">
+      <div class="container p-5 bg-white">
+        <h2 class="section-title">Ready to Equip Your Medical Practice ?</h2>
+        <p>
+          Join thousands of healthcare professionals who trust GeneLead Life
+          Science for their medical supply needs. Set up your account in
+          minutes.
+        </p>
+        <div class="d-flex gap-3 justify-content-end">
+          <button
+            class="btn"
+            style="background-color: rgb(46, 124, 246); color: white"
+          >
+            Get Started
+          </button>
+          <button
+            class="btn"
+            style="background-color: rgb(46, 124, 246); color: white"
+          >
+            Contact Us
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- end of medical practice glass -->
+    <!-- contact us part -->
+    <div class="container-fluid p-5" id="contactus">
+      <div class="container p-5 img-thumbnail" id="form-container">
+        <h2 class="text-center section-title">Stay Updated on GeneLead Life</h2>
+        <p style="width: 100%; display: block" class="text-center">
+          Get exclusive deals, new product alerts, and healthcare insights
+          delivered to your inbox weekly.
+        </p>
+        <form action="" id="myform">
+          <div class="row">
+            <div class="col-md d-flex flex-column p-3">
+              <label for="fname">Frist Name</label>
+              <input type="text" id="fname" name="fname" class="form-control" />
+            </div>
+            <div class="col-md d-flex flex-column p-3">
+              <label for="lname">Lastname</label>
+              <input type="text" id="lname" name="lname" class="form-control" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md d-flex flex-column p-3">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+              />
+            </div>
+            <div class="col-md d-flex flex-column p-3">
+              <label for="phno">Phone Number </label>
+              <input type="tel" id="phno" name="phno" class="form-control" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md d-flex flex-column p-3">
+              <label for="pswrd">Password</label>
+              <input
+                type="password"
+                id="pswrd"
+                name="pswrd"
+                class="form-control"
+              />
+            </div>
+            <div class="col-md d-flex flex-column p-3">
+              <label for="cpswrd"> Confirm Password</label>
+              <input
+                type="password"
+                id="cpswrd"
+                name="cpswrd"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mt-4 pe-md-5">
+            <button class="btn btn-lg me-md-5" style="background-color: white">
+              Subscribe
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- ebd if contact us part -->
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer-section" id="footer">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <a href="#" class="footer-brand">
+              <!-- <span class="brand-icon"
+                ><i class="bi bi-heart-pulse-fill"></i
+              ></span> -->
+              <img src="image/mylogo.png" alt="" width="60px" height="60px" />
+              GeneLead Life
+            </a>
+            <p class="footer-desc">
+              Your trusted source for premium medical products and supplies.
+              Serving healthcare professionals and institutions since 2009.
+              <br />
+              <br />
+              For General Queries <br />
+              Email : info@geneleadlife.co.u <br />
+              <br />
+              Address: GeneLead Life Sciences Limited, 40 Saltash Road, Ilford,
+              England, Postcode: IG6 2NL
+            </p>
+            <div class="footer-social">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-twitter-x"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h6 class="footer-heading">Products</h6>
+            <ul class="footer-links">
+              <li><a href="#">Medicines</a></li>
+              <li><a href="#">Diagnostics</a></li>
+              <li><a href="#">First Aid</a></li>
+              <li><a href="#">Surgical</a></li>
+              <li><a href="#">Respiratory</a></li>
+              <li><a href="#">Monitoring</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h6 class="footer-heading">Company</h6>
+            <ul class="footer-links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Partners</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h6 class="footer-heading">Support</h6>
+            <ul class="footer-links">
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Shipping Info</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h6 class="footer-heading">Newsletter</h6>
+            <p
+              style="
+                font-size: 0.85rem;
+                margin-bottom: 16px;
+                color: rgba(255, 255, 255, 0.5);
+              "
+            >
+              Get updates on new products and deals.
+            </p>
+            <div class="footer-newsletter-input">
+              <input type="email" placeholder="Email" />
+              <button><i class="bi bi-send"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <p>&copy; 2025 GeneLead Life Science. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+              <ul class="footer-bottom-links justify-content-md-end">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle (required for navbar toggle — no custom JS) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
