@@ -587,19 +587,25 @@
         flex: 1;
       }
       .product-category-label {
-        font-size: 0.75rem;
-        font-weight: 600;
+        font-size: 15px;
+        font-weight: 800;
         color: var(--primary);
         text-transform: uppercase;
         letter-spacing: 0.5px;
         margin-bottom: 6px;
       }
+      .product-content{
+        font-size: 15px;
+        color: black;
+        font-weight: bold;
+      }
       .product-name {
         font-size: 1.02rem;
-        font-weight: 700;
-        color: var(--text-dark);
+        font-weight: 600;
+        color: gray;
         margin-bottom: 8px;
         line-height: 1.4;
+        /* text-align: justify; */
       }
       .product-rating {
         display: flex;
@@ -1074,7 +1080,7 @@
         <a class="navbar-brand-medical" href="#">
           <!-- <span class="brand-icon"><i class="bi bi-heart-pulse-fill"></i></span> -->
           <img src="image/mylogo.png" alt="" width="80  px" height="80px" />
-          GeneLead Life
+          GeneLead Life Sciences
         </a>
         <button
           class="navbar-toggler border-0"
@@ -1087,7 +1093,7 @@
         <div class="collapse navbar-collapse" id="navMain">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link nav-link-medical active" href="#">Home</a>
+              <a class="nav-link nav-link-medical " href="#">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link nav-link-medical" href="#about">About</a>
@@ -1109,7 +1115,8 @@
               ><i class="bi bi-search"></i
             ></a>
             <a href="#" class="nav-link-medical position-relative">
-              <i class="bi bi-cart3"></i>
+              <!-- <i class="bi bi-cart3"></i> -->
+              <i class="bi bi-bell-fill"></i>
             </a>
             <a href="#" class="btn btn-nav-cta">Get Started</a>
           </div>
@@ -1118,7 +1125,7 @@
     </nav>
 
     <!-- ========== HERO ========== -->
-    <section class="hero-section">
+    <!-- <section class="hero-section">
       <div class="container">
         <div class="row align-items-center">
           <div class="col px-lg-5 px-3 py-5 mt-3">
@@ -1143,7 +1150,7 @@
             <div class="hero-stats d-flex justify-content-center">
               <div>
                 <div class="hero-stat-number">5,000+</div>
-                <div class="hero-stat-label">Products</div>
+                <div class="hero-stat-label">Products</div3
               </div>
               <div>
                 <div class="hero-stat-number">10K+</div>
@@ -1157,7 +1164,61 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->  
+     <div class="container-fluid bg-light p-5">
+      <div class="row pt-xl-0 mt-xl-0 mt-5 pt-5">
+        <div class="col-lg d-flex flex-column justify-content-center gap-3">
+          <h1 id="har" class="hero-title text-xl-start text-center"><span class="text-gradient">Genelead Life  <br>Sciences Limited</span></h1>
+          <p id="gur" class="hero-subtitle" style="text-align: justify;">
+            Discover our curated collection of high-quality medical supplies, equipment, and healthcare essentials — carefully selected to ensure quality, reliability, and excellence in patient care.
+          </p>
+          <!-- <div class="col bg-info"> -->
+            <div>
+              <button class="btn-nav-cta">Join Us </button>
+            </div>
+          <!-- </div> -->
+          <div
+            class="row gap-3 justify-content-lg-start justify-content-around"
+          >
+            <div class="col-3 d-flex flex-column align-items-center">
+              <img
+                src="image/reserch-icon.png"
+                alt=""
+                style="width: 80px; height: 80px"
+              />
+              <span class="text-capitalize">advanced</span>
+              <span class="text-capitalize">reserch</span>
+            </div>
+            <div class="col-3 d-flex flex-column align-items-center">
+              <img
+                src="image/dna-icon.png"
+                alt=""
+                style="width: 80px; height: 80px"
+              />
+              <span class="text-capitalize">innovative</span>
+              <span class="text-capitalize">solutions</span>
+            </div>
+            <div class="col-3 d-flex flex-column align-items-center">
+              <img
+                src="image/security-icon-removebg-preview.png"
+                alt=""
+                style="width: 80px; height: 80px"
+              />
+              <span class="text-capitalize">trusted</span>
+              <span class="text-capitalize">impact</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg p-5">
+          <img
+            src="image/font-image.png"
+            alt=""
+            style="width: 100%; height: 100%"
+          />
+        </div>
+      </div>
+    </div>
+
 
     <!-- our vison code -->
     <div class="container-fluid px-lg-5 px-3 bg-white pt-5">
@@ -1196,10 +1257,10 @@
                 alt="About MediCare"
                 class="about-image"
               />
-              <div class="about-experience-badge">
-                <div class="exp-number">15+</div>
-                <div class="exp-text">Years of<br />Excellence</div>
-              </div>
+              <!-- <div class="about-experience-badge"> -->
+                <!-- <div class="exp-number">15+</div> -->
+                <!-- <div class="exp-text">Years of<br />Excellence</div> -->
+              <!-- </div> -->
             </div>
           </div>
           <div class="col-lg-6 p-5">
@@ -1232,13 +1293,13 @@
       </div>
     </section>
     <!-- ========== content ========== -->
-    <section class="categories-section section-padding" id="categories">
+    <!-- <section class="categories-section section-padding" id="categories">
       <div class="container">
-        <div class="text-center mb-5">
+        <div class="text-center mb-5"> -->
           <!-- <span class="section-badge"
             ><i class="bi bi-grid-3x3-gap"></i> Content</span
           > -->
-          <h2 class="section-title">Browse by Content</h2>
+          <!-- <h2 class="section-title">Browse by Content</h2>
           <p class="section-subtitle mx-auto">
             Find exactly what you need from our comprehensive range of medical
             product categories.
@@ -1301,7 +1362,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- ========== PRODUCTS ========== -->
     <section class="products-section section-padding" id="products">
@@ -1313,9 +1374,9 @@
             <span class="section-badge"
               ><i class="bi bi-bag-heart"></i> Featured</span
             >
-            <h2 class="section-title">Top Selling Products</h2>
+            <h2 class="section-title" style="padding: 0; margin: 0;">Upcomming Products</h2>
             <p class="section-subtitle">
-              Hand-picked medical essentials trusted by professionals worldwide.
+              More Innovative  Diagnostic Solution Are on the Way
             </p>
           </div>
           <a
@@ -1328,7 +1389,210 @@
         </div>
         <div class="row g-4">
           <!-- Product 1 -->
-          <div class="col-sm-6 col-lg-3">
+          <div class="col-sm-6 col-lg-4">
+            <div class="product-card">
+              <div class="product-image-wrap">
+                <span class="product-badge-tag new">New</span>
+                <a href="#" class="product-wishlist"
+                  ><i class="bi bi-heart"></i
+                ></a>
+                <img src="image/hiv kit.png" alt="Digital Thermometer" />
+              </div>
+              <div class="product-info">
+                <div class="product-category-label">Hiv Ab Test Kit</div>
+                <div class="product-content">GeneLead One-Step HIV 1 & 2 Ab Test Kit</div>
+                <div class="product-name">HIV-1 & HIV-2 Antibody Detection
+For capillary and venous blood samples.</div>
+                <!-- <div class="product-rating"> -->
+                  <!-- <span class="product-stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-half"></i>
+                  </span> -->
+                  <!-- <span class="product-rating-count">(234)</span> -->
+                <!-- </div> -->
+                <!-- <div class="product-bottom">
+                  <div class="product-price">$29.99</div>
+                  <a href="#" class="btn-add-cart"
+                    ><i class="bi bi-plus"></i
+                  ></a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <!-- Product 2 -->
+            <div class="col-sm-6 col-lg-4">
+            <div class="product-card">
+              <div class="product-image-wrap">
+                <span class="product-badge-tag new">New</span>
+                <a href="#" class="product-wishlist"
+                  ><i class="bi bi-heart"></i
+                ></a>
+                <img src="image/product2.png" alt="Digital Thermometer" />
+              </div>
+              <div class="product-info">
+                <div class="product-category-label">Ab Card Kit</div>
+                <div class="product-content">GeneLead HIV Ag & Ab Card</div>
+                <div class="product-name">4th Generation HIV Rapid Test
+Fast, Early & Reliable Detection
+
+            </div>
+                <!-- <div class="product-rating"> -->
+                  <!-- <span class="product-stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-half"></i>
+                  </span> -->
+                  <!-- <span class="product-rating-count">(234)</span> -->
+                <!-- </div> -->
+                <!-- <div class="product-bottom">
+                  <div class="product-price">$29.99</div>
+                  <a href="#" class="btn-add-cart"
+                    ><i class="bi bi-plus"></i
+                  ></a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <!-- Product 3 -->
+               <div class="col-sm-6 col-lg-4">
+            <div class="product-card">
+              <div class="product-image-wrap">
+                <span class="product-badge-tag new">New</span>
+                <a href="#" class="product-wishlist"
+                  ><i class="bi bi-heart"></i
+                ></a>
+                <img src="image/product3.png" alt="Digital Thermometer" />
+              </div>
+              <div class="product-info">
+                <div class="product-category-label">IgM & IgG Card Kit</div>
+                <div class="product-content">GeneLead Typhi IgM & IgG Card Kit</div>
+                <div class="product-name">Typhoid Rapid Test Kit
+Result Time: Within 20 Minutes</div>
+                <!-- <div class="product-rating"> -->
+                  <!-- <span class="product-stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-half"></i>
+                  </span> -->
+                  <!-- <span class="product-rating-count">(234)</span> -->
+                <!-- </div> -->
+                <!-- <div class="product-bottom">
+                  <div class="product-price">$29.99</div>
+                  <a href="#" class="btn-add-cart"
+                    ><i class="bi bi-plus"></i
+                  ></a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <!-- Product 4 -->
+               <div class="col-sm-6 col-lg-4">
+            <div class="product-card">
+              <div class="product-image-wrap">
+                <span class="product-badge-tag new">New</span>
+                <a href="#" class="product-wishlist"
+                  ><i class="bi bi-heart"></i
+                ></a>
+                <img src="image/product4.png" alt="Digital Thermometer" />
+              </div>
+              <div class="product-info">
+                <div class="product-category-label">HBsAg Rapid Test Kit</div>
+                <div class="product-content">GeneLead HBsAg Rapid Test Kit</div>
+                <div class="product-name">Hepatitis B surface Antigen Detection Kit</div>
+                <!-- <div class="product-rating"> -->
+                  <!-- <span class="product-stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-half"></i>
+                  </span> -->
+                  <!-- <span class="product-rating-count">(234)</span> -->
+                <!-- </div> -->
+                <!-- <div class="product-bottom">
+                  <div class="product-price">$29.99</div>
+                  <a href="#" class="btn-add-cart"
+                    ><i class="bi bi-plus"></i
+                  ></a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <!-- Product 5 -->
+              <div class="col-sm-6 col-lg-4">
+            <div class="product-card">
+              <div class="product-image-wrap">
+                <span class="product-badge-tag new">New</span>
+                <a href="#" class="product-wishlist"
+                  ><i class="bi bi-heart"></i
+                ></a>
+                <img src="image/product5.png" alt="Digital Thermometer" />
+              </div>
+              <div class="product-info">
+                <div class="product-category-label">GeneLead HCV Rapid Test Kit</div>
+                <div class="product-content">GeneLead HCV Rapid Test Kit</div>
+                <div class="product-name"> Hepatitis C Antibody Detection Kit </div>
+                <!-- <div class="product-rating"> -->
+                  <!-- <span class="product-stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-half"></i>
+                  </span> -->
+                  <!-- <span class="product-rating-count">(234)</span> -->
+                <!-- </div> -->
+                <!-- <div class="product-bottom">
+                  <div class="product-price">$29.99</div>
+                  <a href="#" class="btn-add-cart"
+                    ><i class="bi bi-plus"></i
+                  ></a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <!-- Product 6 -->
+              <div class="col-sm-6 col-lg-4">
+            <div class="product-card">
+              <div class="product-image-wrap">
+                <span class="product-badge-tag new">New</span>
+                <a href="#" class="product-wishlist"
+                  ><i class="bi bi-heart"></i
+                ></a>
+                <img src="image/product6.png" alt="Digital Thermometer" />
+              </div>
+              <div class="product-info">
+                <div class="product-category-label">Syphilis Rapid Test Kit</div>
+                <div class="product-content">GeneLead Syphilis Rapid Test Kit</div>
+                <div class="product-name">Syphilis (Treponema pallidum) Antibody Detection Kit</div>
+                <!-- <div class="product-rating"> -->
+                  <!-- <span class="product-stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-half"></i>
+                  </span> -->
+                  <!-- <span class="product-rating-count">(234)</span> -->
+                <!-- </div> -->
+                <!-- <div class="product-bottom">
+                  <div class="product-price">$29.99</div>
+                  <a href="#" class="btn-add-cart"
+                    ><i class="bi bi-plus"></i
+                  ></a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <!-- Product 7 -->
+              <!-- <div class="col-sm-6 col-lg-3">
             <div class="product-card">
               <div class="product-image-wrap">
                 <span class="product-badge-tag new">New</span>
@@ -1338,253 +1602,64 @@
                 <img src="image/BloodGlucoseTestStrips.jpg" alt="Digital Thermometer" />
               </div>
               <div class="product-info">
-                <div class="product-category-label">IVD</div>
-                <div class="product-name">Blood Glucose Test Strips</div>
-                <div class="product-rating">
-                  <span class="product-stars">
+                <div class="product-category-label">Ab Card Kit</div>
+                <div class="product-content">GeneLead HIV Ag & Ab Card</div>
+                <div class="product-name">HIV Antigen and Antibody Rapid Test Kit
+Feature: 4th Generation , Use of capillary and venous samples
+Detect HIV -1 p24 Antigen and Antibodies (IgM, IgG& IgA) Detectiion</div> -->
+                <!-- <div class="product-rating"> -->
+                  <!-- <span class="product-stars">
                     <i class="bi bi-star-fill"></i
                     ><i class="bi bi-star-fill"></i
                     ><i class="bi bi-star-fill"></i
                     ><i class="bi bi-star-fill"></i
                     ><i class="bi bi-star-half"></i>
-                  </span>
-                  <span class="product-rating-count">(234)</span>
-                </div>
-                <div class="product-bottom">
+                  </span> -->
+                  <!-- <span class="product-rating-count">(234)</span> -->
+                <!-- </div> -->
+                <!-- <div class="product-bottom">
                   <div class="product-price">$29.99</div>
                   <a href="#" class="btn-add-cart"
                     ><i class="bi bi-plus"></i
                   ></a>
-                </div>
-              </div>
+                </div> -->
+              <!-- </div>
             </div>
-          </div>
-          <!-- Product 2 -->
-          <div class="col-sm-6 col-lg-3">
-            <div class="product-card">
-              <div class="product-image-wrap">
-                <span class="product-badge-tag sale">Sale</span>
-                <a href="#" class="product-wishlist"
-                  ><i class="bi bi-heart"></i
-                ></a>
-                <img src="image/AutomaticBloodPressureMonitor.jpg" alt="Blood Pressure Monitor" />
-              </div>
-              <div class="product-info">
-                <div class="product-category-label">Diagnostics</div>
-                <div class="product-name">Automatic Blood Pressure Monitor</div>
-                <div class="product-rating">
-                  <span class="product-stars">
-                    <i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i>
-                  </span>
-                  <span class="product-rating-count">(512)</span>
-                </div>
-                <div class="product-bottom">
-                  <div class="product-price">
-                    $49.99 <span class="old-price">$69.99</span>
-                  </div>
-                  <a href="#" class="btn-add-cart"
-                    ><i class="bi bi-plus"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Product 3 -->
-          <div class="col-sm-6 col-lg-3">
-            <div class="product-card">
-              <div class="product-image-wrap">
-                <span class="product-badge-tag best">Best</span>
-                <a href="#" class="product-wishlist"
-                  ><i class="bi bi-heart"></i
-                ></a>
-                <img src="image/PregnancyTestKit.jpg" alt="First Aid Kit" />
-              </div>
-              <div class="product-info">
-                <div class="product-category-label">IVD</div>
-                <div class="product-name">Pregnancy Test Kit</div>
-                <div class="product-rating">
-                  <span class="product-stars">
-                    <i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i>
-                  </span>
-                  <span class="product-rating-count">(1,024)</span>
-                </div>
-                <div class="product-bottom">
-                  <div class="product-price">$39.99</div>
-                  <a href="#" class="btn-add-cart"
-                    ><i class="bi bi-plus"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Product 4 -->
-          <div class="col-sm-6 col-lg-3">
+          </div> -->
+          <!-- Product 8 -->
+              <!-- <div class="col-sm-6 col-lg-3">
             <div class="product-card">
               <div class="product-image-wrap">
                 <span class="product-badge-tag new">New</span>
                 <a href="#" class="product-wishlist"
                   ><i class="bi bi-heart"></i
                 ></a>
-                <img src="image/HIVTest.jpg" alt="Pulse Oximeter" />
+                <img src="image/BloodGlucoseTestStrips.jpg" alt="Digital Thermometer" />
               </div>
               <div class="product-info">
-                <div class="product-category-label">IVD</div>
-                <div class="product-name">HIV Test</div>
-                <div class="product-rating">
-                  <span class="product-stars">
-                    <i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
-                  </span>
-                  <span class="product-rating-count">(387)</span>
-                </div>
-                <div class="product-bottom">
-                  <div class="product-price">$24.99</div>
-                  <a href="#" class="btn-add-cart"
-                    ><i class="bi bi-plus"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Product 5 -->
-          <div class="col-sm-6 col-lg-3">
-            <div class="product-card">
-              <div class="product-image-wrap">
-                <a href="#" class="product-wishlist"
-                  ><i class="bi bi-heart"></i
-                ></a>
-                <img src="image/ProfessionalDual-HeadStethoscope.jpg" alt="Stethoscope" />
-              </div>
-              <div class="product-info">
-                <div class="product-category-label">Diagnostics</div>
-                <div class="product-name">
-                  Professional Dual-Head Stethoscope
-                </div>
-                <div class="product-rating">
-                  <span class="product-stars">
+                <div class="product-category-label">Ab Card Kit</div>
+                <div class="product-content">GeneLead HIV Ag & Ab Card</div>
+                <div class="product-name">HIV Antigen and Antibody Rapid Test Kit
+Feature: 4th Generation , Use of capillary and venous samples
+Detect HIV -1 p24 Antigen and Antibodies (IgM, IgG& IgA) Detectiion</div> -->
+                <!-- <div class="product-rating"> -->
+                  <!-- <span class="product-stars">
                     <i class="bi bi-star-fill"></i
                     ><i class="bi bi-star-fill"></i
                     ><i class="bi bi-star-fill"></i
                     ><i class="bi bi-star-fill"></i
                     ><i class="bi bi-star-half"></i>
-                  </span>
-                  <span class="product-rating-count">(198)</span>
-                </div>
-                <div class="product-bottom">
-                  <div class="product-price">$89.99</div>
+                  </span> -->
+                  <!-- <span class="product-rating-count">(234)</span> -->
+                <!-- </div> -->
+                <!-- <div class="product-bottom">
+                  <div class="product-price">$29.99</div>
                   <a href="#" class="btn-add-cart"
                     ><i class="bi bi-plus"></i
                   ></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Product 6 -->
-          <div class="col-sm-6 col-lg-3">
-            <div class="product-card">
-              <div class="product-image-wrap">
-                <span class="product-badge-tag sale">Sale</span>
-                <a href="#" class="product-wishlist"
-                  ><i class="bi bi-heart"></i
-                ></a>
-                <img src="image/flue.png" alt="Glucometer" />
-              </div>
-              <div class="product-info">
-                <div class="product-category-label">RT-PCR</div>
-                <div class="product-name">Influenza(flu)Testing</div>
-                <div class="product-rating">
-                  <span class="product-stars">
-                    <i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i>
-                  </span>
-                  <span class="product-rating-count">(756)</span>
-                </div>
-                <div class="product-bottom">
-                  <div class="product-price">
-                    $19.99 <span class="old-price">$34.99</span>
-                  </div>
-                  <a href="#" class="btn-add-cart"
-                    ><i class="bi bi-plus"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Product 7 -->
-          <div class="col-sm-6 col-lg-3">
-            <div class="product-card">
-              <div class="product-image-wrap">
-                <span class="product-badge-tag best">Best</span>
-                <a href="#" class="product-wishlist"
-                  ><i class="bi bi-heart"></i
-                ></a>
-                <img src="image/HepatitisVirusTesting.jpg" alt="Nebulizer" />
-              </div>
-              <div class="product-info">
-                <div class="product-category-label">RT-PCR</div>
-                <div class="product-name">Hepatitis Virus Testing</div>
-                <div class="product-rating">
-                  <span class="product-stars">
-                    <i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-half"></i>
-                  </span>
-                  <span class="product-rating-count">(421)</span>
-                </div>
-                <div class="product-bottom">
-                  <div class="product-price">$54.99</div>
-                  <a href="#" class="btn-add-cart"
-                    ><i class="bi bi-plus"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Product 8 -->
-          <div class="col-sm-6 col-lg-3">
-            <div class="product-card">
-              <div class="product-image-wrap">
-                <a href="#" class="product-wishlist"
-                  ><i class="bi bi-heart"></i
-                ></a>
-                <img src="image/COVID-19Testing.jpg" alt="Surgical Mask" />
-              </div>
-              <div class="product-info">
-                <div class="product-category-label">RT-PCR</div>
-                <div class="product-name">COVID-19 Testing</div>
-                <div class="product-rating">
-                  <span class="product-stars">
-                    <i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i>
-                  </span>
-                  <span class="product-rating-count">(2,130)</span>
-                </div>
-                <div class="product-bottom">
-                  <div class="product-price">$34.99</div>
-                  <a href="#" class="btn-add-cart"
-                    ><i class="bi bi-plus"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
+                </div> -->
+              <!-- </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -1599,8 +1674,7 @@
           >
           <h2 class="section-title">Built for Healthcare Excellence</h2>
           <p class="section-subtitle mx-auto">
-            Every detail of our service is designed to meet the highest
-            standards of medical supply delivery.
+            Every product reflects our commitment to quality, safety, and exceptional performance.
           </p>
         </div>
         <div class="row g-4">
@@ -1619,6 +1693,21 @@
               </p>
             </div>
           </div>
+           <div class="col-md-6 col-lg-3">
+            <div class="feature-card">
+              <div
+                class="feature-icon-wrap"
+                style="background: #fff1f2; color: #f43f5e"
+              >
+                <!-- <i class="bi bi-arrow-repeat"></i> -->
+                <i class="bi bi-prescription2"></i>
+              </div>
+              <h5 class="feature-title">Healthcare Professional Focused</h5>
+              <p class="feature-text">
+               Advancing Healthcare Through Trusted Diagnostic Solutions Reliable Diagnostic Solutions.
+              </p>
+            </div>
+          </div>
           <div class="col-md-6 col-lg-3">
             <div class="feature-card">
               <div
@@ -1630,10 +1719,9 @@
               >
                 <i class="bi bi-lightning-charge-fill"></i>
               </div>
-              <h5 class="feature-title">Fast Delivery</h5>
+              <h5 class="feature-title">Quality Assured</h5>
               <p class="feature-text">
-                Same-day dispatch with express shipping options to get supplies
-                where they're needed most.
+               Quality that healthcare professionals trust every day. Engineered for precision. Certified for confidence.
               </p>
             </div>
           </div>
@@ -1652,21 +1740,7 @@
               </p>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="feature-card">
-              <div
-                class="feature-icon-wrap"
-                style="background: #fff1f2; color: #f43f5e"
-              >
-                <i class="bi bi-arrow-repeat"></i>
-              </div>
-              <h5 class="feature-title">Easy Returns</h5>
-              <p class="feature-text">
-                Hassle-free 30-day return policy with full refund guarantee on
-                all unopened products.
-              </p>
-            </div>
-          </div>
+         
         </div>
       </div>
     </section>
@@ -1682,7 +1756,7 @@
           >
           <h2 class="section-title">Scientific Advisory Committee Say</h2>
           <p class="section-subtitle mx-auto">
-            Many of Doctors Describe the Quality of our work
+            Trusted By Healthcare Proffessionals for Exceptional Quality
           </p>
         </div>
         <!-- <div class="row g-4"> -->
@@ -1796,8 +1870,7 @@
       <div class="container p-5 img-thumbnail" id="form-container">
         <h2 class="text-center section-title">Stay Updated on GeneLead Life</h2>
         <p style="width: 100%; display: block" class="text-center">
-          Get exclusive deals, new product alerts, and healthcare insights
-          delivered to your inbox weekly.
+        Stay updated with the latest products, exclusive offers, and healthcare innovations.
         </p>
         <form action="" id="myform">
           <div class="row">
@@ -1845,8 +1918,8 @@
               />
             </div>
           </div>
-          <div class="col d-flex justify-content-center mt-4">
-            <button class="btn btn-lg" style="background-color: white; font-weight: bold;">
+          <div class="col d-flex justify-content-center mt-4 pe-md-5">
+            <button class="btn btn-lg me-md-5" style="background-color: white; font-weight: bold;">
               Subscribe
             </button>
           </div>
@@ -1889,22 +1962,22 @@
           <div class="col-6 col-lg-2">
             <h6 class="footer-heading">Products</h6>
             <ul class="footer-links">
-              <li><a href="#">Medicines</a></li>
-              <li><a href="#">Diagnostics</a></li>
-              <li><a href="#">First Aid</a></li>
-              <li><a href="#">Surgical</a></li>
-              <li><a href="#">Respiratory</a></li>
-              <li><a href="#">Monitoring</a></li>
+              <li><a href="#">Lateral flow immunoassays</a></li>
+              <li><a href="#">Molecular Diagnostic assays</a></li>
+              <li><a href="#">HIV 1 & 2 Ab Test</a></li>
+              <li><a href="#">HIV Ag & Ab Card </a></li>
+              <!-- <li><a href="#">IgM & IgG Card</a></li>
+              <li><a href="#">HBsAg Rapid Test</a></li> -->
             </ul>
           </div>
           <div class="col-6 col-lg-2">
             <h6 class="footer-heading">Company</h6>
             <ul class="footer-links">
               <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Vision</a></li>
+              <li><a href="#">Product</a></li>
+              <li><a href="#">Healthare</a></li>
               <li><a href="#">Careers</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Press</a></li>
-              <li><a href="#">Partners</a></li>
             </ul>
           </div>
           <div class="col-6 col-lg-2">
@@ -1912,8 +1985,8 @@
             <ul class="footer-links">
               <li><a href="#">Help Center</a></li>
               <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Shipping Info</a></li>
-              <li><a href="#">Returns</a></li>
+              <!-- <li><a href="#">Shipping Info</a></li>
+              <li><a href="#">Returns</a></li> -->
               <li><a href="#">FAQs</a></li>
             </ul>
           </div>
@@ -1926,7 +1999,7 @@
                 color: rgba(255, 255, 255, 0.5);
               "
             >
-              Get updates on new products and deals.
+              Stay tunned for upcoming products
             </p>
             <div class="footer-newsletter-input">
               <input type="email" placeholder="Email" style="width:80%;"/>
